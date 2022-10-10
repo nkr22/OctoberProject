@@ -14,8 +14,7 @@
 from django.db import models
 class Donut (models.Model):
     description = models.TextField(null=True, blank=True)
-    updated = models.DateTimeField(auto_now=True)
-    created = models.DateField(auto_now_add=True)
+    price = models.FloatField(null=True, blank=True)
     url = models.URLField(null=True, blank=True)
 
     def __str__(self):

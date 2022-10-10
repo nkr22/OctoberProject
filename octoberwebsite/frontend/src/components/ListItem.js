@@ -7,6 +7,9 @@ const ListItem = ({donut}) => {
                 <Link to={`donut/${donut.id}`}>
                     {donut.description}
                 </Link>
+                <div className="donut-price">
+                    ${(Math.round(donut.price * 100) / 100).toFixed(2)}
+                </div>
             </div>       
     )
 }

@@ -255,3 +255,8 @@ a {
   height: 250px;
 
 }
+
+.donut-price{
+  display: block;
+  float: right;
+}
