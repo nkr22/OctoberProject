@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-wt347jh8cw_*+$bat%xlkv7&qz85pxpm)9y7t#jjr5mw=zg)_!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'basic.apps.BasicConfig',
+    'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -49,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'octoberwebsite.urls'
@@ -56,7 +59,7 @@ ROOT_URLCONF = 'octoberwebsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'frontend/build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,10 +81,10 @@ WSGI_APPLICATION = 'octoberwebsite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'octoberdatabase',
-        'USER': 'root',
-        'PASSWORD': 'Happ1n3ss',
-        'HOST': 'localhost',
+        'NAME': 'donut',
+        'USER': 'admin',
+        'PASSWORD': 'admin123',
+        'HOST': 'forreal.cluster-ro-cnnytpwix4c5.us-east-2.rds.amazonaws.com',
         'PORT': '3306',
     }
 }
@@ -123,7 +126,13 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [
+    BASE_DIR / 'frontend/build/static'
+]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ORIGIN_ALLOW_ALL = True

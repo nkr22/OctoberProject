@@ -1,0 +1,16 @@
+Python:
+
+django==4.1.2
+django-cors-headers=3.13.0
+djangorestframework=3.14.0
+
+Node:
+
+react@18.2.0
+react-router-dom@5.3.0
+
+when all changes have been made run the command:
+npm run build
+in the frontend folder to compile and optomize production code
+
+
