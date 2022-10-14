@@ -1,0 +1,19 @@
+version: 0.0
+os: linux
+files:
+  - source: /octoberwebsite
+    destination: /home/ec2-user
+  - source: /testdjango.conf
+    destination: /home/ec2-user
+hooks:
+  BeforeIsntall:
+    - location: scripts/install_dependencies
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: scripts/start_server
+      timeout: 300
+      runas: root
+
+
+
