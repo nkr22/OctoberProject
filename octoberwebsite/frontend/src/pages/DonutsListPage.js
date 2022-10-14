@@ -19,12 +19,14 @@ const DonutsListPage = () => {
     }
 
     return (
-        <div className="donut">
-            <div className="donut-header">
+    
+
+        <div >
+            <div className="donut-header" style={{borderBottom: '1px solid black'}}>
                 <h3 className="donut-title"><DonutIcon/> Donuts</h3>
                 <p className="donut-count">{donuts.length} Donuts</p>
             </div>
-            <div className="donuts-list">
+            <div class="row" style={{padding: '20px'}}>
                 {donuts.map((donut, index) =>(
                     <ListItem key={index} donut={donut}/>
                 ))}
