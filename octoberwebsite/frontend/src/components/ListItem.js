@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const ListItem = ({donut}) => {
     return(
-            <div class="col-lg-4 col-md-4" >
+            <div class="col-lg-4 col-md-4 content" >
                 <article class="post-grid mb-5">
                 <Link to={`donut/${donut.id}`}>
                     <img src={`${donut?.url}`} alt="image of donut" class="img-fluid" style={{width:'auto'}}/>
