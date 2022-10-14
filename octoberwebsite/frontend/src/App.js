@@ -11,14 +11,24 @@ import DonutPage from './pages/DonutPage'
 function App() {
   return (
     <Router>
-      <div className="container dark">
-        <div className='app'>
-        <Header/>
-        <Route path="/" exact component={ DonutsListPage } />
-        <Route path="/donut/:id" component={DonutPage} /> 
-        </div>
+    <Header/>
+      <div>
+        <section class="section-padding">
+          <div class="container">
+                
+                  <Route path="/" exact component={ DonutsListPage } />
+                  <Route path="/donut/:id" component={DonutPage} /> 
+                
+          </div>
+        </section>
+
+
+
+
+      
       </div>
    </Router>
+    
   );
 }
 

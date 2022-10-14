@@ -18,14 +18,19 @@ const DonutPage = ({match}) => {
 
     return (
         <div className='donut'>
-            <div className='donut-header'>
+            <div className='donut-header' style={{borderBottom: '1px solid black'}}>
                 <h3>
-                    <a href='/'>
+                    <a href='/' className="donut-title" >
                         <ArrowLeft/>
                     </a>
                 </h3>
+                
+                <p className="donut-count" style={{fontSize:'40px', color:'lightsalmon'}}>{donut?.description}</p>
             </div>
-            <img className='donut-image' src={`${donut?.url}`}/>
+            <div className="row section-padding">
+                <img className='img-fluid col-lg-6 col-md-4' style={{width:'auto', height:'auto'}} src={`${donut?.url}`} />
+                <div className='col-lg-6 col-md-6' style={{fontSize:'20px', textAlign:'center'}}><span style={{fontSize:'40px', color:'#ce8460'}}>Fun Fact!</span> <br></br> {donut?.funfact}</div>
+            </div>
         </div>
     )
 }

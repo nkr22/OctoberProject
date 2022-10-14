@@ -16,6 +16,7 @@ class Donut (models.Model):
     description = models.TextField(null=True, blank=True)
     price = models.FloatField(null=True, blank=True)
     url = models.URLField(null=True, blank=True)
+    funfact=models.TextField(null=True, blank=True)
 
     def __str__(self):
         return self.description[0:50]
