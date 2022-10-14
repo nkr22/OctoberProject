@@ -27,6 +27,14 @@
   scroll-behavior: smooth;
 }
 
+.content {
+  transition:0.3s;
+}
+
+.content:hover {
+  transform: scale(1.25);     /* Equal to scaleX(2) scaleY(2) */
+}
+
 
 body{
   line-height: 1.8em;
