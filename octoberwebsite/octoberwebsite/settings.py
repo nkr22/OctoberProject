@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'octoberwebsite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'donut',
+        'USER': 'admin',
+        'PASSWORD': 'admin123',
+        'HOST': 'forreal.cluster-ro-cnnytpwix4c5.us-east-2.rds.amazonaws.com',
+        'PORT': '3306',
     }
 }
 
